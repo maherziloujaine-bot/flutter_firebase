@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter_firebase/Views/liste_livre_view.dart';
 import 'package:provider/provider.dart';
 import 'firebase_options.dart'; // ← Fichier de configuration
 import 'controllers/livre_controller.dart';
 //import 'views/liste_livres_view.dart';
-
+import 'views/liste_livre_view_recherche.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,7 +16,6 @@ void main() async {
   
   runApp(MyApp());
 }
-
 
 class MyApp extends StatelessWidget {
   @override
@@ -35,7 +33,7 @@ class MyApp extends StatelessWidget {
         //   useMaterial3: true,
         // ),
         theme: ThemeData(
-          useMaterial3: false, // Pour compatibilité avec cardTheme comme ci-dessous
+          useMaterial3: false, // ⚠️ Pour compatibilité avec cardTheme comme ci-dessous
           primaryColor: const Color(0xFF4CAF50),
           scaffoldBackgroundColor: const Color(0xFFF5F5F5),
           appBarTheme: const AppBarTheme(

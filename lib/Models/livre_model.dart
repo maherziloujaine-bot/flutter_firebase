@@ -21,7 +21,7 @@ class Livre {
   }
   
   // Créer Livre depuis Firestore document
-  factory Livre.fromFirestore(Map<String, dynamic> data, String id) {
+  factory Livre.fromFirestore(Map data, String id) {
     return Livre(
       id: id,
       titre: data['titre'] ?? '',
